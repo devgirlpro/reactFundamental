@@ -6,7 +6,7 @@ const Greet = (props) => {
       <h2>
         My name is {props.name}, {props.age} years old, from {props.city}{' '}
       </h2>
-      
+      {props.children}
     </>
   );
 };
