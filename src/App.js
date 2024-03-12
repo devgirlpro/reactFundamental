@@ -5,6 +5,15 @@ import NameList from './components/NameList';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
+import './appStyles.css';
+import styles from './appStyles.module.css';
+// import Form from './components/Form';
+import FormComponent from './components/FormComponent';
+
+
+
+
 function App() {
   return (
     <div className="App">
@@ -23,13 +32,27 @@ function App() {
       <br />
       <UserGreeting />
       <br />
-      <br />
       <NameList />
       <br />
-      <br />
       <Stylesheet />
+      <br />
+      <Inline />
+      <br />
+      <h1 className='error' >ERROR styled from appStyles.css</h1>
+      <br />
+      <h1 className={styles.success} >SUCCESS styled from appStyles.module.css</h1>
+      <br />
+     {/* <Form /> */}
+     <FormComponent />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
 
 export default App;
+
+
+
