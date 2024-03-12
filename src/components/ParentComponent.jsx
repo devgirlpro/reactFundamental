@@ -3,8 +3,8 @@ import ChildComponent from './ChildComponent';
 
 const ParentComponent = () => {
 
-    const greetParent = () => {
-        alert('Hello parent')
+    const greetParent = (childName) => {
+        alert(`Hello parent ${childName }`)
     };
 
   return (
