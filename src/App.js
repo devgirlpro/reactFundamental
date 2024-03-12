@@ -1,6 +1,7 @@
 import './App.css';
 import Greet from './components/Greet';
 import Message from './components/Message';
+import NameList from './components/NameList';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 
@@ -21,6 +22,9 @@ function App() {
       <ParentComponent />
       <br />
       <UserGreeting />
+      <br />
+      <br />
+      <NameList />
     </div>
   );
 }
