@@ -4,7 +4,7 @@ import Message from './components/Message';
 import NameList from './components/NameList';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
-
+import Stylesheet from './components/Stylesheet';
 function App() {
   return (
     <div className="App">
@@ -25,6 +25,9 @@ function App() {
       <br />
       <br />
       <NameList />
+      <br />
+      <br />
+      <Stylesheet />
     </div>
   );
 }
