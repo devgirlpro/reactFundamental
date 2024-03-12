@@ -1,8 +1,8 @@
 import './App.css';
- import Greet from './components/Greet';
+import Greet from './components/Greet';
 import Message from './components/Message';
 import ParentComponent from './components/ParentComponent';
-
+import UserGreeting from './components/UserGreeting';
 
 function App() {
   return (
@@ -12,7 +12,6 @@ function App() {
       <Greet name="Rosi" age="28" city="London">
         <button>Action</button>
       </Greet>
-
       <Greet name="Niki" age="31" city="Dubai">
         <p>This is children props</p>
       </Greet>
@@ -20,7 +19,8 @@ function App() {
       <Message />
       <br />
       <ParentComponent />
-      
+      <br />
+      <UserGreeting />
     </div>
   );
 }
