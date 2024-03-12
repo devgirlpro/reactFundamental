@@ -8,8 +8,8 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import './appStyles.css';
 import styles from './appStyles.module.css';
-// import Form from './components/Form';
 import FormComponent from './components/FormComponent';
+import PostList from './components/PostList';
 
 
 
@@ -45,6 +45,7 @@ function App() {
      {/* <Form /> */}
      <FormComponent />
       <br />
+      <PostList />
       <br />
       <br />
       <br />
