@@ -4,7 +4,7 @@ const PostFormDisplay = () => {
   const [userId, setUserId] = useState('');
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [submittedData, setSubmittedData] = useState(null);
+  const [submittedData, setSubmittedData] = useState([]);
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -84,9 +84,9 @@ const PostFormDisplay = () => {
         {submittedData && (
           <div>
             <h2>Submitted Post:</h2>
-            <p>User Id: {submittedData.userId}</p>
             <p>Title: {submittedData.title}</p>
             <p>body: {submittedData.body}</p>
+            <p>User Id: {submittedData.userId}</p>
           </div>
         )}
       </form>

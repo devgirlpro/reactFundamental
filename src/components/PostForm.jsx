@@ -6,9 +6,7 @@ const PostForm = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
-  const [submittedData, setSubmittedData] = useState(null);
-
-
+  const [submittedData, setSubmittedData] = useState([]);
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -24,8 +22,35 @@ const PostForm = () => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`ERROR submitting data: ${response.statusText} `);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        //setSubmittedData(data);
+        const newSubmittedData = {
+          // Create new object for current submission
+          userId: data.userId,
+          title: data.title,
+          body: data.body,
+        };
+
+        const updatedSumbittedData = [...submittedData, newSubmittedData]; // Append to array
+
+        setSubmittedData(updatedSumbittedData); // Update state with all submissions
+
+        console.log('Data submitted successfully:', updatedSumbittedData);
+
+        // Clear form fields after successful submission
+        setUserId('');
+        setTitle('');
+        setBody('');
+      })
+      .catch((error) => {
+        console.error('Error submitting data:', error);
+      });
   };
 
   return (
@@ -66,7 +91,21 @@ const PostForm = () => {
           />
         </div>
         <button type="submit">Submit</button>
+        <br />
+        <br />
       </form>
+      <br />
+      <br />
+     
+      {submittedData.map((submission,index) => (
+        <div key={index}>
+          <h2>Submitted Post:</h2>
+          <p>User ID: {submission.userId}</p>
+          <p>Title: {submission.title}</p>
+          <p>Body: {submission.body}</p>
+        </div>
+      ))}
+       <br /><br /><br /><br /><br />
     </>
   );
 };
