@@ -12,6 +12,7 @@ const PostForm = () => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
+
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       body: JSON.stringify({
@@ -24,7 +25,7 @@ const PostForm = () => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((data) => console.log(data));
   };
 
   return (

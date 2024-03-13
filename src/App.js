@@ -11,6 +11,7 @@ import styles from './appStyles.module.css';
 import FormComponent from './components/FormComponent';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
+import PostFormDisplay from './components/PostFormDisplay';
 
 
 
@@ -49,6 +50,13 @@ function App() {
       <PostList />
       <br />
       <PostForm />
+      <br />
+      <PostFormDisplay />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
     </div>
