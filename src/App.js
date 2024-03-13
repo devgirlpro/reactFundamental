@@ -10,6 +10,7 @@ import './appStyles.css';
 import styles from './appStyles.module.css';
 import FormComponent from './components/FormComponent';
 import PostList from './components/PostList';
+import PostForm from './components/PostForm';
 
 
 
@@ -47,6 +48,7 @@ function App() {
       <br />
       <PostList />
       <br />
+      <PostForm />
       <br />
       <br />
     </div>
