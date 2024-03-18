@@ -1,8 +1,9 @@
 import React from 'react';
+import Person from './Person';
 
 const List = () => {
   const nameList = ['Bruce', 'Clark', 'Diana'];
-  const persons = [
+  const personsList = [
     { id: 1, name: 'Bruce', age: 30, skil: 'react' },
     { id: 2, name: 'Clark', age: 25, skil: 'Angular' },
     { id: 3, name: 'Diana', age: 28, skil: 'Vue' },
@@ -17,13 +18,10 @@ const List = () => {
       </ul>
 
       <h2>ist of object</h2>
-
-      {persons.map((person) => {
+      {personsList.map((person) => {
         return (
-          <h4 key={person.id}>
-            {`this is ${person.name} with ${person.age} years old and knowlenge of ${person.skil}`}
-          </h4>
-        );
+            <Person person={person} />
+        )
       })}
     </>
   );
