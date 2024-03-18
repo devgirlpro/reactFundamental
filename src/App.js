@@ -12,6 +12,10 @@ import FormComponent from './components/FormComponent';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
 import PostFormDisplay from './components/PostFormDisplay';
+import FunctionClick from './components/FunctionClick';
+import ParentCompo from './components/ParentCompo';
+
+
 
 function App() {
   return (
@@ -53,8 +57,10 @@ function App() {
       <PostForm />
       <br />
       <br /> 
+     <FunctionClick />
       <br />
       <br />
+      <ParentCompo />
       <br />
       <br />
       <br />
