@@ -3,7 +3,7 @@ import React from 'react';
 const Person = ({person}) => {
   return (
     <>
-      <h4 key={person.id}>
+      <h4>
         {`I am  ${person.name} with ${person.age} years old and knowlenge of ${person.skil}`}
       </h4>
     </>

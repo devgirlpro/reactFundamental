@@ -20,7 +20,7 @@ const List = () => {
       <h2>ist of object</h2>
       {personsList.map((person) => {
         return (
-            <Person person={person} />
+            <Person person={person} key={person.id}/>
         )
       })}
     </>
