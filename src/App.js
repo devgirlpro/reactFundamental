@@ -13,21 +13,18 @@ import PostList from './components/PostList';
 import PostForm from './components/PostForm';
 import PostFormDisplay from './components/PostFormDisplay';
 
-
-
-
 function App() {
   return (
     <div className="App">
-      <h1>React Foundamental </h1>
+      <h1>React Foundamental </h1> <br /><br />
       <Greet name="Lili" age="22" city="Dublin" />
       <Greet name="Rosi" age="28" city="London">
         <button>Action</button>
       </Greet>
       <Greet name="Niki" age="31" city="Dubai">
-        <p>This is children props</p>
+        <p><strong>This is children props</strong></p>
       </Greet>
-      <br />
+      <br /><br />
       <Message />
       <br />
       <ParentComponent />
@@ -40,20 +37,22 @@ function App() {
       <br />
       <Inline />
       <br />
-      <h1 className='error' >ERROR styled from appStyles.css</h1>
+      <h1 className="error">ERROR styled from appStyles.css</h1>
       <br />
-      <h1 className={styles.success} >SUCCESS styled from appStyles.module.css</h1>
+      <h1 className={styles.success}>
+        SUCCESS styled from appStyles.module.css
+      </h1>
       <br />
-     {/* <Form /> */}
-     <FormComponent />
+      {/* <Form /> */}
+      <FormComponent />
       <br />
       <PostList />
       <br />
-      <PostForm />
-      <br />
       <PostFormDisplay />
       <br />
+      <PostForm />
       <br />
+      <br /> 
       <br />
       <br />
       <br />
@@ -64,6 +63,3 @@ function App() {
 }
 
 export default App;
-
-
-
