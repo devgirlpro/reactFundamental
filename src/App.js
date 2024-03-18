@@ -14,6 +14,7 @@ import PostForm from './components/PostForm';
 import PostFormDisplay from './components/PostFormDisplay';
 import FunctionClick from './components/FunctionClick';
 import ParentCompo from './components/ParentCompo';
+import List from './components/List';
 
 
 
@@ -61,6 +62,16 @@ function App() {
       <br />
       <br />
       <ParentCompo />
+      <br />
+      <br />
+     <List />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
       <br />
